@@ -45,7 +45,8 @@ function App() {
     const newTodos = [...todos];
     const todo = newTodos.find((todo) => todo.id === id);
     todo.name = value;
-    setTodos(todo);
+    todo.edit = false;
+    setTodos(newTodos);
   }
 
   function handleAddTodo(e) {
